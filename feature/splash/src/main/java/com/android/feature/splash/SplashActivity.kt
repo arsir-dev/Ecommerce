@@ -1,5 +1,6 @@
 package com.android.feature.splash
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,15 +21,18 @@ class SplashActivity : ComponentActivity() {
             EcommerceTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     SplashScreen(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+                        onSplashFinished = {
+                            val intent = Intent(this, Class.forName("com.android.ecommerce.MainActivity"))
+                            startActivity(intent)
+                            finish()
+                        }
                     )
                 }
             }
         }
     }
 }
-
-
 
 @Preview(showBackground = true)
 @Composable
