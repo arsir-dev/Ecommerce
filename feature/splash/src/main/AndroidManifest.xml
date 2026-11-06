@@ -3,9 +3,13 @@
 
     <application>
         <activity
-            android:name=".SplashActivity"
+            android:name="com.android.feature.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Ecommerce">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
