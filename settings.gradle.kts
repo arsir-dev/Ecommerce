@@ -23,3 +23,4 @@ rootProject.name = "Ecommerce"
 include(":app")
 include(":feature:splash")
 include(":feature:onboarding")
+include(":data:onboarding")
