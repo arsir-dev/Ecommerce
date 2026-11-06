@@ -1,5 +1,6 @@
-package com.android.ecommerce
+package com.android.feature.splash
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,22 +8,25 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.android.ecommerce.ui.theme.EcommerceTheme
+import com.android.feature.splash.ui.theme.EcommerceTheme
 
-class MainActivity : ComponentActivity() {
+class SplashActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             EcommerceTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    SplashScreen(
+                        modifier = Modifier.padding(innerPadding),
+                        onSplashFinished = {
+                            val intent = Intent(this, Class.forName("com.android.ecommerce.MainActivity"))
+                            startActivity(intent)
+                            finish()
+                        }
                     )
                 }
             }
@@ -30,18 +34,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun SplashPreview() {
     EcommerceTheme {
-        Greeting("Android")
+        SplashScreen()
     }
 }
