@@ -23,7 +23,7 @@ object OnboardingModule {
 
     @Provides
     @Singleton
-    fun provideOnboardingDatastore(
+    fun provideOnboardingDatastoreInstance(
         onboardingDatastoreImpl: OnboardingDatastoreImpl
     ): OnboardingDatastore {
         return onboardingDatastoreImpl
