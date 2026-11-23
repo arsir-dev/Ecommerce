@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_page1_title">Discover Products</string>
+    <string name="onboarding_page1_description">Explore thousands of products from your favorite brands with exclusive deals.</string>
+    <string name="onboarding_page2_title">Easy &amp; Secure Payment</string>
+    <string name="onboarding_page2_description">Multiple payment options with top-notch security to keep your transactions safe.</string>
+    <string name="onboarding_page3_title">Fast Delivery</string>
+    <string name="onboarding_page3_description">Get your orders delivered right to your doorstep quickly and reliably.</string>
+    <string name="onboarding_button_start">Get Started</string>
+</resources>
