@@ -1,4 +1,4 @@
-package com.android.ecommerce.ui.theme
+package com.android.feature.splash.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
